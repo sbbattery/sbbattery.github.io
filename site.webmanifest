@@ -13,8 +13,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#3e3e3e",
-    "background_color": "#3e3e3e",
+    "theme_color": "#ff5c5c",
+    "background_color": "#ff5c5c",
     "start_url": "https://sbbattery.github.io",
     "display": "standalone"
 }
