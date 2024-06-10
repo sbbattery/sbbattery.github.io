@@ -1,0 +1,87 @@
+{
+    "name": "SB Batteries",
+    "short_name": "SB Batteries",
+    "theme_color": "#3e3e3e",
+    "background_color": "#3e3e3e",
+    "start_url": "https://sbbattery.github.io",
+    "display": "standalone",
+    "description": "Install sbbattery PWA now!",
+    "scope": "/",
+    "app_name": "SB Batteries",
+    "icons": [
+        {
+            "src": "images/favicons/512x512LOGO.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "images/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "images/favicons/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(1024x786).png",
+            "sizes": "1024x786",
+            "type": "image/gif",
+            "form_factor": "wide",
+            "label": "Get Charged!"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(1024x786)2.png",
+            "sizes": "1024x786",
+            "type": "image/gif",
+            "form_factor": "wide",
+            "label": "Get Charged!"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(1024x786)3.png",
+            "sizes": "1024x786",
+            "type": "image/gif",
+            "form_factor": "wide",
+            "label": "Get Charged!"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(1024x786)4.png",
+            "sizes": "1024x786",
+            "type": "image/gif",
+            "form_factor": "wide",
+            "label": "Get Charged!"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(912x1368).png",
+            "sizes": "912x1368",
+            "type": "image/gif",
+            "form_factor": "narrow",
+            "label": "Get Charged!"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(912x1368)2.png",
+            "sizes": "912x1368",
+            "type": "image/gif",
+            "form_factor": "narrow",
+            "label": "Get Charged!"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(912x1368)3.png",
+            "sizes": "912x1368",
+            "type": "image/gif",
+            "form_factor": "narrow",
+            "label": "Get Charged!"
+        },
+        {
+            "src": "https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/pwa_SS(912x1368)4.png",
+            "sizes": "912x1368",
+            "type": "image/gif",
+            "form_factor": "narrow",
+            "label": "Get Charged!"
+        }
+    
+    ]  
+}
