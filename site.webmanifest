@@ -1,8 +1,8 @@
 {
     "name": "SB Batteries",
     "short_name": "SB Batteries",
-    "theme_color": "#3e3e3e",
-    "background_color": "#3e3e3e",
+    "theme_color": "#2f2923",
+    "background_color": "#2f2923",
     "start_url": "https://sbbattery.github.io",
     "display": "standalone",
     "description": "Install sbbattery PWA now!",
