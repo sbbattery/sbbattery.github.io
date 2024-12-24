@@ -57,51 +57,29 @@
               <a href="https://sbbattery.github.io/#work" class="nav-link"> Who we work with </a>
             </li>
             <li class="nav-item">
-              <a href="https://sbbattery.github.io/contact.html" class="nav-link contact"> Contact us </a>
-            </li>
-			<li class="nav-item">
-              <a href="https://sbbattery.github.io/admin.html" class="nav-link contact"> Admin </a>
+              <a href="https://sbbattery.github.io/#contact" class="nav-link contact"> Contact us </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <div class="col-lg-5 col-md-6 mx-auto mt-lg-5 col-12 aos-init aos-animate" data-aos=fade-up data-aos-delay=200 style="padding-top: 5em;">
-      <h2>Hey there, Let us
-        <b>Solve your Problem!
+      <h1>Welcome to
+        <b>Admin Page
         </b>
-      </h2>
-      <p class="mt-3 mb-4">Contact us NOW!
+      </h1>
+      <p class="mt-3 mb-4">Login to Access tools
       </p>
-      <blockquote>
-        <br>
-        <b> Phone number: </b>
-        <a href="tel:+919325417265" rel="nofollow" target="_blank"> +91 9325417265 </a>&nbsp;
-        <a href="tel:+917972858153" rel="nofollow" target="_blank"> +91 7972858153 </a>
-        <br>
-        <b> Email: </b>
-        <a href="mailto:info.sbbattery@gmail.com" rel="nofollow" target="_blank"> info.sbbatery@gmail.com </a>
-        <br>
-        <b> Address: </b>
-        <a href="https://g.page/SBBATTERIES" rel="nofollow" target="_blank"> Shop No.7, Ganesh Apartment, Plot No. 86, State Highway 260, Opposite Katariya Mangal Karyalay, Old Pardi Naka Chowk, Surya Nagar, Nagpur, Maharashtra 440008. </a>
-        <br>
-        <b> Whatsapp: </b>
-        <a href="https://wa.me/+919325417265" rel="nofollow" target="_blank"> +91 9325417265 </a>
-        <br>
-        <a href="https://instagram.com/sbbatteries" rel="nofollow" target="_blank">
-          <b>Instagram Account </b>
-        </a>
-        <br>
-        <a href="https://facebook.com/sbbatteries" rel="nofollow" target="_blank">
-          <b>Facebook Page </b>
-        </a>
-      </blockquote>
-    </div>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScaXwggm-9OoSp6EXq1cfcbSPS-eTcQGPsbrtPre5GvZ9TF-w/viewform?embedded=true" width=100% height=1000 class=google-form>
-    </iframe>
-    <div class=google-map data-aos=zoom-in>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14884.15943497083!2d79.1478151!3d21.150812!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf125a94a4ab7b286!2sSB%20Batteries%20And%20Auto%20Electricals!5e0!3m2!1sen!2sin!4v1666723978536!5m2!1sen!2sin" width=100% height=600 style=border:0 allowfullscreen>
-      </iframe>
+	  <blockquote>
+	  <button class="custom-btn" id="login">LOGIN</button>
+      <button id="logout" style="display: none;">LOGOUT</button>
+	  </blockquote>
+<div id="protected-content" style="display: none;">
+    <!-- This is where the protected content will be dynamically loaded -->
+</div>
+
+
+
     </div>
     <footer class=site-footer>
       <div class=container>
@@ -204,5 +182,82 @@
     </script>
     <script src=js/fontawesome.js>
     </script>
+	<script src="https://cdn.auth0.com/js/auth0-spa-js/1.19/auth0-spa-js.production.js"></script>
+	<script>
+// Initialize Auth0 client
+let auth0 = null;
+
+const initializeAuth0 = async () => {
+    auth0 = await createAuth0Client({
+        domain: "dev-16q4nmkcmjgkknet.us.auth0.com",  // Replace with your Auth0 domain
+        client_id: "P5fKJEAT6qo9rTbAbuXQTbRbF859NNzJ"   // Replace with your Auth0 client ID
+    });
+};
+
+// Check login status and handle UI accordingly
+const updateUI = async () => {
+    const isAuthenticated = await auth0.isAuthenticated();
+
+    if (isAuthenticated) {
+        document.getElementById("protected-content").style.display = "block";
+        document.getElementById("login").style.display = "none";
+        document.getElementById("logout").style.display = "inline";
+    } else {
+        document.getElementById("protected-content").style.display = "none";
+        document.getElementById("login").style.display = "inline";
+        document.getElementById("logout").style.display = "none";
+    }
+};
+
+// Handle login button click
+document.getElementById("login").addEventListener("click", async () => {
+    await auth0.loginWithRedirect({
+        redirect_uri: window.location.origin
+    });
+});
+
+// Handle logout button click
+document.getElementById("logout").addEventListener("click", async () => {
+    await auth0.logout({
+        returnTo: window.location.origin
+    });
+});
+
+// Handle redirect after login
+window.onload = async () => {
+    await initializeAuth0();
+
+    const query = window.location.search;
+    if (query.includes("code=") && query.includes("state=")) {
+        // Process login state
+        await auth0.handleRedirectCallback();
+        window.history.replaceState({}, document.title, "/");
+    }
+
+    // Update the UI after authentication check
+    await updateUI();
+};
+</script>
+<script>
+    // Function to load protected content after authentication
+    const loadProtectedContent = () => {
+        // Example: Fetch the protected content from an external source (like an API or JSON file)
+        fetch('protected-content.html')  // Replace with your actual content URL
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('protected-content').innerHTML = data;
+                document.getElementById('protected-content').style.display = 'block';
+            })
+            .catch(error => console.error('Error loading protected content:', error));
+    };
+
+    // Call this function after the user is authenticated
+    const updateUI = async () => {
+        const isAuthenticated = await auth0.isAuthenticated();
+        if (isAuthenticated) {
+            loadProtectedContent();  // Load the content only after login
+        }
+    };
+</script>
   </body>
 </html>
