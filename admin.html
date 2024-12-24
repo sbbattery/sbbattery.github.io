@@ -212,14 +212,14 @@ const updateUI = async () => {
 // Handle login button click
 document.getElementById("login").addEventListener("click", async () => {
     await auth0.loginWithRedirect({
-        redirect_uri: window.location.origin
+        redirect_uri: 'https://sbbattery.github.io/admin.html'
     });
 });
 
 // Handle logout button click
 document.getElementById("logout").addEventListener("click", async () => {
     await auth0.logout({
-        returnTo: window.location.origin
+        returnTo: 'https://sbbattery.github.io/admin.html'
     });
 });
 
