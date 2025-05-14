@@ -37,10 +37,11 @@
     <meta property="twitter:description" content="Wide range of automotive batteries and services in Nagpur.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/sbbattery/sbbattery.github.io/main/images/banner.webp">
 
-    <!-- JSON-LD Structured Data for Rich Snippets -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "http://schema.org/",
       "@type": "Store",
       "name": "S.B. Batteries",
       "description": "S.B. Batteries in Nagpur provides a wide range of battery services including Exide, Amaron, SF, and other local brands.",
@@ -52,7 +53,7 @@
       "telephone": "+919325417265",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Shop No.7, Ganesh Apartment Plot No.86, SH260, opposite Katariya Mangal Karyalay, Old Pardi Naka, Chowk, Surya Nagar",
+        "streetAddress": "Shop No.7, Ganesh Apartment, Plot No.86, SH260, opposite Katariya Mangal Karyalay, Old Pardi Naka, Chowk, Surya Nagar",
         "addressLocality": "Nagpur",
         "addressRegion": "Maharashtra",
         "postalCode": "440008",
@@ -66,13 +67,13 @@
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": [
-          "http://schema.org/Monday",
-          "http://schema.org/Tuesday",
-          "http://schema.org/Wednesday",
-          "http://schema.org/Thursday",
-          "http://schema.org/Friday",
-          "http://schema.org/Saturday",
-          "http://schema.org/Sunday"
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
         ],
         "opens": "10:00",
         "closes": "20:30"
@@ -84,102 +85,141 @@
         "https://facebook.com/sbbatteries",
         "https://instagram.com/sbbatteries",
         "https://www.justdial.com/jdmart/Nagpur/S-B-Batteries-and-Auto-Electricals-Works-Opposite-Katariya-Mangal-Karyalay-Netaji-Nagar/0712PX712-X712-161117230101-D7X8_BZDET/catalogue",
-        "https://www.indiamart.com/sb-batteries-and-auto-electricals/?srsltid=AfmBOopA__iAikb2_TftfPtV1nJebGUOpMmZvzD2Y2iwRki6H0VHbxGJ",
+        "https://www.indiamart.com/sb-batteries-and-auto-electricals/",
         "https://zaubee.com/biz/sb-batteries-and-auto-electricals-w246ym7f",
-        "https://yandex.com/maps/994/india/category/batteries_and_chargers/184107030/?ll=79.069728%2C21.162414&sll=79.069728%2C21.161608&z=9"
+        "https://yandex.com/maps/994/india/category/batteries_and_chargers/184107030/?ll=79.069728%2C21.162414"
+      ],
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Anas Khan"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Best shop for batteries and services regarding the batteries in East Nagpur. Services were quite great and on time."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Meet Rawal"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Good battery and have long life"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Ahsan Ahmad"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Excellent services 👍"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the average lifespan of a car battery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The average lifespan of a car battery is about 3 to 5 years, depending on usage, climate conditions, and maintenance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if my battery needs to be replaced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common signs include difficulty starting the engine, dim lights, battery warning light on the dashboard, and corrosion around terminals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can inverter batteries be used for automotive purposes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, inverter batteries are designed for deep cycle usage and are not suitable for the high current demands of starting a car engine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I check the water level in my lead-acid battery?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's recommended to check the water level every 3 months. Always use distilled water to top it up if needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the best battery brands for inverters in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some of the most reliable inverter battery brands in India include Exide, Luminous, Amaron, and Livguard."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I buy genuine automotive batteries in Nagpur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can visit S.B. Batteries and Auto Electricals, a trusted supplier of original automotive and inverter batteries located in Nagpur. We offer brands like Exide, Amaron, and SF Sonic at competitive prices with free installation and doorstep delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer inverter battery installation services in Nagpur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, S.B. Batteries and Auto Electricals provides inverter battery installation and replacement services across Nagpur. Our trained technicians ensure safe and efficient service at your location."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there any emergency battery replacement service in Nagpur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We offer urgent battery replacement services for cars and inverters in Nagpur. Call us, and our team will reach you quickly to replace your battery on-site."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is the best place to get your car battery tested in Nagpur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visit S.B. Batteries and Auto Electricals for a free car battery health checkup. We provide professional testing, expert advice, and battery replacement if needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide doorstep delivery for batteries in Nagpur?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide same-day doorstep delivery and installation of automotive and inverter batteries in most areas of Nagpur. Contact us for quick service."
+          }
+        }
       ]
     }
-    </script>
+  ]
+}
+</script>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the average lifespan of a car battery?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The average lifespan of a car battery is about 3 to 5 years, depending on usage, climate conditions, and maintenance."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I know if my battery needs to be replaced?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Common signs include difficulty starting the engine, dim lights, battery warning light on the dashboard, and corrosion around terminals."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can inverter batteries be used for automotive purposes?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "No, inverter batteries are designed for deep cycle usage and are not suitable for the high current demands of starting a car engine."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How often should I check the water level in my lead-acid battery?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "It's recommended to check the water level every 3 months. Always use distilled water to top it up if needed."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What are the best battery brands for inverters in India?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Some of the most reliable inverter battery brands in India include Exide, Luminous, Amaron, and Livguard."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where can I buy genuine automotive batteries in Nagpur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can visit S.B. Batteries and Auto Electricals, a trusted supplier of original automotive and inverter batteries located in Nagpur. We offer brands like Exide, Amaron, and SF Sonic at competitive prices with free installation and doorstep delivery."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer inverter battery installation services in Nagpur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, S.B. Batteries and Auto Electricals provides inverter battery installation and replacement services across Nagpur. Our trained technicians ensure safe and efficient service at your location."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is there any emergency battery replacement service in Nagpur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. We offer urgent battery replacement services for cars and inverters in Nagpur. Call us, and our team will reach you quickly to replace your battery on-site."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which is the best place to get your car battery tested in Nagpur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Visit S.B. Batteries and Auto Electricals for a free car battery health checkup. We provide professional testing, expert advice, and battery replacement if needed."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you provide doorstep delivery for batteries in Nagpur?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes, we provide same-day doorstep delivery and installation of automotive and inverter batteries in most areas of Nagpur. Contact us for quick service."
-            }
-          }
-        ]
-      }
-      </script>
-      
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQHG23Y7QR"></script>
@@ -335,6 +375,27 @@
         </div>
       </div>
     </section>
+    <section class="section-padding" id="reviews">
+      <div class="container">
+        <h2 class="mb-4">Customer Testimonials</h2>
+
+      <div class="faq-item">
+         <h3>⭐️⭐️⭐️⭐️⭐️ - Anas Khan</h3>
+         <p>Best shop for batteries and services regarding the batteries in East Nagpur. Services were quite great and on time.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>⭐️⭐️⭐️⭐️⭐️ - Meet Rawal </h3>
+        <p>Good battery and have long life</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>⭐️⭐️⭐️⭐️⭐️ - Ahsan Ahmad</h3>
+        <p>Excellent services 👍</p>
+      </div>
+      </div>
+    </section>
+
     <section class="section-padding" id="faq">
       <div class="container">
         <h2 class="mb-4">Frequently Asked Questions</h2>
