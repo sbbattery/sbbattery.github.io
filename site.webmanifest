@@ -1,5 +1,5 @@
 {
-    "name": "S.B. Batteries",
+    "name": "SB Enterprises",
     "short_name": "Batteries",
     "theme_color": "#fa9416",
     "background_color": "#332c22",
@@ -7,7 +7,7 @@
     "display": "standalone",
     "description": "Install sbbattery PWA now!",
     "scope": "/",
-    "app_name": "S.B. Batteries",
+    "app_name": "SB Enterprises",
     "icons": [
     {
       "src": "/images/favicons/web-app-manifest-192x192.png",
